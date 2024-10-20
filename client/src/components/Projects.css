@@ -1,0 +1,55 @@
+/* Styles for the project cards */
+.box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Tilt Effect */
+.box:hover {
+  transform: rotateX(10deg) rotateY(10deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styles */
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide project content by default */
+.content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+/* Show content on hover */
+.box:hover .content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Ensure the content section has a background color when visible */
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* General box shadow for better visibility */
+.box {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}

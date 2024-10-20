@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background-color: white;
+    font-family: "Lexend Deca", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+.nav-items{
+    border-bottom: solid 3px black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.start-page{
+    background-image: linear-gradient(#4682A9,#1C3443);
+}
+.text{
+    color: rgb(34, 63, 83);
+}
+.navbar{
+    border-bottom: solid 1px rgb(184, 184, 184);
+}
+.line{
+    border: solid 2px black;
+}
+@keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  /* CSS for tilt effect */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tilt-card:hover {
+  transform: rotateX(10deg) rotateY(10deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* Slide up animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s forwards;
+}
+/* Add smooth transitions */
+.btn-transition {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-transition:hover {
+  background-color: #4b6de9; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack nav items on smaller screens */
+  }
+
+  .tilt-card {
+    padding: 2rem; /* Adjust padding for cards */
+  }
+}
+
+/* Slide-in effect for sections */
+.animate-slideIn {
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
