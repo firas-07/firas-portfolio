@@ -3,13 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-app.use(cors(
-    {
-        origin: ["https://firas-portfolio-chi.vercel.app/"],
-        methods: ["POST", "GET"],
-        crendtials: true
-    }
-));
+app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb://localhost:27017/portfolio-contact', {
@@ -46,7 +40,9 @@ app.post('/submit-form', async (req, res) => {
         res.status(500).json({ error: 'Error saving form data' });
     }
 });
-
+app.use("/",(req,res)=>{
+    res.send("Server is running")
+})
 // Start the server
 const PORT = 5000;
 app.listen(PORT, () => {
